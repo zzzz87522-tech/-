@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>С днем рождения</title>
+</head>
+<body>
+   <h1 class="GG">Поздравляю тебя с днем рождения</h1>
+   <p class="text-box">Вот и наступил твой день рождения и это небольшой мой написанный подарок,<br>основной подарок заберешь в ВБ и спасибо что ты рядом</p>
+   <button class="vis" id="hideBtn">Открыть</button>
+
+   <!-- Сердце из слов (пока скрыто) -->
+   <div class="heart-wrapper" id="heartBox">
+       <div class="heart-grid">
+           <div><span></span><span>L</span><span>O</span><span>V</span><span>E</span><span>Y</span><span></span><span></span><span></span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span></span></div>
+           <div><span>E</span><span>Y</span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span></span><span>E</span><span>Y</span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span></div>
+           <div><span>E</span><span>Y</span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span>E</span><span>Y</span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span>E</span></div>
+           <div><span>Y</span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span>E</span><span>Y</span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span>E</span><span>Y</span></div>
+           <div><span></span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span>E</span><span>Y</span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span>E</span><span></span></div>
+           <div><span></span><span></span><span>Y</span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span>E</span><span>Y</span><span>O</span><span>U</span><span>L</span><span></span><span></span></div>
+           <div><span></span><span></span><span></span><span>O</span><span>V</span><span>E</span><span>Y</span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span></span><span></span><span></span></div>
+           <div><span></span><span></span><span></span><span></span><span>E</span><span>Y</span><span>O</span><span>U</span><span>L</span><span>O</span><span>V</span><span></span><span></span><span></span><span></span></div>
+           <div><span></span><span></span><span></span><span></span><span></span><span>E</span><span>Y</span><span>O</span><span>U</span><span>L</span><span></span><span></span><span></span><span></span><span></span></div>
+           <div><span></span><span></span><span></span><span></span><span></span><span></span><span>O</span><span>V</span><span>E</span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+           <div><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span>Y</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+       </div>
+   </div>
+
+   <script>
+       const btn = document.getElementById('hideBtn');
+       const contentToHide = document.querySelectorAll('.GG, .text-box, .vis');
+       const heartBox = document.getElementById('heartBox');
+
+       btn.addEventListener('click', () => {
+           contentToHide.forEach(el => el.style.display = 'none');
+           heartBox.classList.add('visible');
+       });
+   </script>
+</body>
+</html>
